@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0048)https://pubweb.eng.utah.edu/~cs4400/servlab.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=0.8"><title>Server Assignment</title><link rel="stylesheet" type="text/css" href="./Server Assignment_files/scribble.css" title="default"><link rel="stylesheet" type="text/css" href="./Server Assignment_files/manual-style.css" title="default"><style type="text/css">
+.tocset { background-color: hsl(87.5, 24%, 52.5%); }
+</style><link rel="stylesheet" type="text/css" href="./Server Assignment_files/manual-racket.css" title="default"><script type="text/javascript" src="./Server Assignment_files/scribble-common.js"></script><script type="text/javascript" src="./Server Assignment_files/manual-racket.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">►</a></td><td></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html" class="tocviewlink" data-pltdoc="x">CS 4400 – Computer Systems &nbsp; Fall 2018</a></td></tr></tbody></table></div><div class="tocviewsublisttop" style="display: none;" id="tocview_0"><table cellspacing="0" cellpadding="0"><tbody><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._.Schedule__subject_to_change_%29" class="tocviewlink" data-pltdoc="x">Schedule <span class="Smaller">[subject to change]</span></a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._staff%29" class="tocviewlink" data-pltdoc="x">Course Staff</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._desc%29" class="tocviewlink" data-pltdoc="x">Course Description</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._.Videos%29" class="tocviewlink" data-pltdoc="x">Videos</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._.No_.Videos%29" class="tocviewlink" data-pltdoc="x">No Videos</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" class="tocviewselflink" data-pltdoc="x">Homework Assignments</a></td></tr></tbody></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a></td><td></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" class="tocviewlink" data-pltdoc="x">Homework Assignments</a></td></tr></tbody></table><div class="tocviewsublist" style="display: block;" id="tocview_1"><table cellspacing="0" cellpadding="0"><tbody><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/bomb.html" class="tocviewlink" data-pltdoc="x">Bomb Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/performance.html" class="tocviewlink" data-pltdoc="x">Performance Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/linklab.html" class="tocviewlink" data-pltdoc="x">Linking Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/shell.html" class="tocviewlink" data-pltdoc="x">Shell Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html" class="tocviewlink" data-pltdoc="x">Malloc Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html" class="tocviewselflink" data-pltdoc="x">Server Assignment</a></td></tr></tbody></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_2&quot;);">►</a></td><td></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html" class="tocviewselflink" data-pltdoc="x">Server Assignment</a></td></tr></tbody></table><div class="tocviewsublistbottom" style="display: none;" id="tocview_2"><table cellspacing="0" cellpadding="0"><tbody><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._.Server._.Getting._.Started%29" class="tocviewlink" data-pltdoc="x">Getting Started</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._.Server_.Behavior%29" class="tocviewlink" data-pltdoc="x">Server Behavior</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._service-queries%29" class="tocviewlink" data-pltdoc="x">Server Queries</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._availability%29" class="tocviewlink" data-pltdoc="x">Availability and Client Constraints</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._support-libraries%29" class="tocviewlink" data-pltdoc="x">Support Libraries</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._servlab-evalution%29" class="tocviewlink" data-pltdoc="x">Evaluation</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._servlab-tips%29" class="tocviewlink" data-pltdoc="x">Tips</a></td></tr></tbody></table></div></div></div><div class="tocsub"><div class="tocsubtitle">On this page:</div><table class="tocsublist" cellspacing="0"><tbody><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._.Server._.Getting._.Started%29" class="tocsubseclink" data-pltdoc="x">Getting Started</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._.Server_.Behavior%29" class="tocsubseclink" data-pltdoc="x">Server Behavior</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._service-queries%29" class="tocsubseclink" data-pltdoc="x">Server Queries</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._availability%29" class="tocsubseclink" data-pltdoc="x">Availability and Client Constraints</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._support-libraries%29" class="tocsubseclink" data-pltdoc="x">Support Libraries</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._servlab-evalution%29" class="tocsubseclink" data-pltdoc="x">Evaluation</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._servlab-tips%29" class="tocsubseclink" data-pltdoc="x">Tips</a></td></tr></tbody></table></div></div><div class="maincolumn"><div class="main"><div class="navsettop"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html" title="backward to &quot;Malloc Assignment&quot;" data-pltdoc="x">← prev</a>&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" title="up to &quot;Homework Assignments&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<span class="nonavigation">next →</span></span>&nbsp;</div><h4><a name="(part._servlab)"></a>Server Assignment</h4><blockquote class="refpara"><blockquote class="refcolumn"><blockquote class="refcontent"><p>This lab is based on the Tiny web server by Bryant and O’Hallaron for
+<span style="font-style: italic">Computer Systems: A Programmer’s Perspective</span>,
+Third Edition</p></blockquote></blockquote></blockquote><p>Due: Wednesday, December 5, 11:59pm</p><p>In this lab, you’ll modify a web server to implement a concurrent
+server for managing people and the places that they have
+visited—<wbr>something like “red pins” on a map. Part of the server’s
+functionality will involve acting as a client to copy pins from other
+servers that implement the same protocol.</p><h5><a name="(part._.Server._.Getting._.Started)"></a>Getting Started</h5><p>Start by unpacking
+<a href="https://pubweb.eng.utah.edu/~cs4400/servlab-handout.zip"><span class="stt">servlab-handout.zip</span></a>.
+The only file you will be modifying and handing in is <span class="stt">"redpin.c"</span>.</p><p>You can build and run the initial server, which is a variant of
+the book’s Tiny web server, with</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ make</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ ./redpin </span><span class="sroman">‹<span style="font-style: italic">port</span>›</span></p></td></tr></tbody></table><p></p><p>where <span class="sroman">‹<span style="font-style: italic">port</span>›</span> is some number between 1024 and 65535. After
+starting <span class="stt">redpin</span>, you can connect to it using a web browser or
+<span class="stt">curl</span> on the same machine with</p><blockquote class="SCentered"><p><span class="stt">http://localhost:</span><span class="sroman">‹<span style="font-style: italic">port</span>›</span><span class="stt">/</span></p></blockquote><p>The initial server replies to any request with a list of two people:
+<span class="stt">alice</span> and <span class="stt">bob</span>. The server also prints to standard output any
+query parameters that it received through the request, both in the URL
+and as POST data.</p><h5><a name="(part._.Server_.Behavior)"></a>Server Behavior</h5><p>Your revised server must keep track (in memory) of any number of
+people and, for each person, any number of places that they have
+visited. That’s equivalent to keeping track of any number of places
+and, for each place, any number of people who have visited the place.</p><p>Each person and each place is identified by an arbitrary string that
+does not include a space or newline character. A person or place
+identity is case-sensitive. A person and a place can each have the
+same name, but a place is distinct from a person with the same name.</p><p>Any number of clients should be able to connect to the server (up to
+typical load limits) and communicate about any number of people
+and places. The server starts with an empty set of people and places.</p><p>Your server must be highly available as described in
+<a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._availability%29" data-pltdoc="x">Availability and Client Constraints</a>, which means that it is robust against slow or
+misbehaving clients. This availability requirement will require
+concurrency in your server implementation. For grading, we will test
+your server by throwing a mixture of clients—<wbr>fast and slow, behaving
+and misbehaving—<wbr>all at the same time.</p><p>Finally, your server must not leak memory as long as all connections
+are well-behaved (i.e., any client errors are confirmed to bad query
+parameters). We will run your server under Valgrind to check whether
+it can detect any leaks.</p><p>Your server’s output to <span class="stt">stdout</span> and <span class="stt">stderr</span> will be ignored,
+so you can use those streams for logging or debugging as you see fit.</p><h5><a name="(part._service-queries)"></a>Server Queries</h5><p>Your server starts out with an empty set of people and places. A
+<span class="stt">pin</span> operation adds person-at-place combinations to the server, and
+an <span class="stt">unpin</span> operation can remove person-at-place combinations. There
+is no fixed set of people and places; when a person is mentioned in a
+<span class="stt">pin</span> operation, the person is added to the set of people tracked by
+the server, and similarly for places. When an <span class="stt">unpin</span> operation
+removes the last pin for a person or place, then the person or place
+is no longer tracked by the server.</p><p>Your server must support several kinds of HTTP GET/POST requests:</p><ul><li><p><span class="stt">/counts</span> —<wbr> Returns the number of people currently tracked
+by the server and the number of places tracked by the server.
+Each of those two numbers is reported on a newline-terminated
+line as plain text (i.e., <span class="stt">text/plain; charset=utf-8</span>).</p><p>For example, if this is the first query to a freshly started
+server, the result content is equivalent to the C string
+<span class="stt">"0\n0\n"</span>.</p></li><li><p><span class="stt">/reset</span> —<wbr> Removes all pins (i.e., all people and places)
+and returns new people and place counts in the same format as
+for a <span class="stt">counts</span> query.</p><p>Since <span class="stt">reset</span> clears all people and places, the result
+content is always equivalent to the C string <span class="stt">"0\n0\n"</span>.</p></li><li><p></p><div class="SIntrapara"><span class="stt">/people</span> or <span class="stt">/people?place=</span><span class="sroman">‹<span style="font-style: italic">place</span>›</span> —<wbr> Returns
+</div><div class="SIntrapara"><ul><li><p>all of the people currently tracked by the server if
+<span class="sroman">‹<span style="font-style: italic">place</span>›</span> is not specified in the query; or</p></li><li><p>all people who have visited <span class="sroman">‹<span style="font-style: italic">place</span>›</span> if
+<span class="sroman">‹<span style="font-style: italic">place</span>›</span> is specified.</p></li></ul></div><p></p><p>Each person is reported on a separate newline-terminated line
+as plain text (i.e., <span class="stt">text/plain; charset=utf-8</span>), and the
+people returned by the server can be in any order.</p><p>The result is empty if no people are tracked or if
+<span class="sroman">‹<span style="font-style: italic">place</span>›</span> is specified and is not tracked by the server
+(which means that no people have visited that
+<span class="sroman">‹<span style="font-style: italic">place</span>›</span>).</p></li><li><p></p><div class="SIntrapara"><span class="stt">/places</span> or <span class="stt">/places?person=</span><span class="sroman">‹<span style="font-style: italic">person</span>›</span> —<wbr> Returns
+</div><div class="SIntrapara"><ul><li><p>all of the places currently tracked by the server if
+<span class="sroman">‹<span style="font-style: italic">person</span>›</span> is not specified in the query; or</p></li><li><p>all places that have visited by <span class="sroman">‹<span style="font-style: italic">person</span>›</span> if
+<span class="sroman">‹<span style="font-style: italic">person</span>›</span> is specified.</p></li></ul></div><p></p><p>Each place is reported on a separate newline-terminated line as
+plain text (i.e., <span class="stt">text/plain; charset=utf-8</span>), and the
+places returned by the server can be in any order.</p><p>The result is empty if no places are tracked or if
+<span class="sroman">‹<span style="font-style: italic">person</span>›</span> is specified and is not tracked by the server
+(which means that the <span class="sroman">‹<span style="font-style: italic">person</span>›</span> hasn’t visited any
+places).</p></li><li><p><span class="stt">/pin?people=</span><span class="sroman">‹<span style="font-style: italic">people</span>›</span><span class="stt">&amp;places=</span><span class="sroman">‹<span style="font-style: italic">places</span>›</span> —<wbr>
+Adds a pin for each person in <span class="sroman">‹<span style="font-style: italic">people</span>›</span> at each place in
+<span class="sroman">‹<span style="font-style: italic">places</span>›</span>. The <span class="sroman">‹<span style="font-style: italic">people</span>›</span> list can be a single
+person or multiple newline-separated person names, optionally
+ending with a newline character. The <span class="sroman">‹<span style="font-style: italic">places</span>›</span> list can
+be a single place or multiple newline-separated place names,
+optionally ending with a newline character.</p><p>Every person in <span class="sroman">‹<span style="font-style: italic">people</span>›</span> is recorded as visiting every
+place in <span class="sroman">‹<span style="font-style: italic">places</span>›</span>. If any person in <span class="sroman">‹<span style="font-style: italic">people</span>›</span> is
+already recorded as having visited any place in
+<span class="sroman">‹<span style="font-style: italic">places</span>›</span>, then the <span class="stt">pin</span> request does not create a
+redundant entry for that person–place combination.</p><p>The result of the query is new people and place counts in the
+same format as for a <span class="stt">counts</span> query.</p><p>Note that a long list of people in <span class="sroman">‹<span style="font-style: italic">people</span>›</span> or places
+in <span class="sroman">‹<span style="font-style: italic">places</span>›</span> will require that the <span class="stt">people</span> part or
+<span class="stt">places</span> part of the query is sent as POST data, instead of
+supplied as part of the URL. The starting code already merges
+POST query data with URL query arguments for you, so the idea
+of using POST is only relevant if you want to construct your
+own extra large tests.</p></li><li><p><span class="stt">/unpin?people=</span><span class="sroman">‹<span style="font-style: italic">people</span>›</span><span class="stt">&amp;places=</span><span class="sroman">‹<span style="font-style: italic">places</span>›</span> —<wbr>
+Removes the pin for each person in <span class="sroman">‹<span style="font-style: italic">people</span>›</span> at each
+place in <span class="sroman">‹<span style="font-style: italic">places</span>›</span>. The <span class="sroman">‹<span style="font-style: italic">people</span>›</span> list can be a single
+person or multiple newline-separated person names, optionally
+ending with a newline character. The <span class="sroman">‹<span style="font-style: italic">places</span>›</span> list can
+be a single place or multiple newline-separated place names,
+optionally ending with a newline character.</p><p>Every person in <span class="sroman">‹<span style="font-style: italic">people</span>›</span> is combined with every place
+in <span class="sroman">‹<span style="font-style: italic">places</span>›</span> to remove the corresponding person–place
+entry from the server. If any person in <span class="sroman">‹<span style="font-style: italic">people</span>›</span> is not
+recorded as having visited any place in <span class="sroman">‹<span style="font-style: italic">places</span>›</span>, then
+the <span class="stt">unpin</span> request has no effect for that person–place
+combination.</p><p>The result of the query is new people and place counts in the
+same format as for a <span class="stt">counts</span> query.</p><p>Just like <span class="stt">pin</span> requests, long <span class="sroman">‹<span style="font-style: italic">people</span>›</span> and
+<span class="sroman">‹<span style="font-style: italic">places</span>›</span> lists may be supplied as POST data instead of
+being part of the URL.</p></li><li><p><span class="stt">/copy?person=</span><span class="sroman">‹<span style="font-style: italic">person</span>›</span><span class="stt">&amp;as=</span><span class="sroman">‹<span style="font-style: italic">person</span>›</span><span class="stt">&amp;host=</span><span class="sroman">‹<span style="font-style: italic">host</span>›</span><span class="stt">&amp;port=</span><span class="sroman">‹<span style="font-style: italic">port</span>›</span>
+—<wbr> Contacts a server running on <span class="sroman">‹<span style="font-style: italic">host</span>›</span> at
+<span class="sroman">‹<span style="font-style: italic">port</span>›</span> to get all of the places visited by the <span class="stt">person</span>
+argument’s <span class="sroman">‹<span style="font-style: italic">person</span>›</span>, and adds them as places visited by
+the <span class="stt">as</span> argument’s <span class="sroman">‹<span style="font-style: italic">person</span>›</span>.</p><p>The given <span class="sroman">‹<span style="font-style: italic">host</span>›</span> and <span class="sroman">‹<span style="font-style: italic">port</span>›</span> should refer to
+some <span class="stt">redpin</span> server. The server that receives the
+<span class="stt">copy</span> request should itself not fail if the server at
+<span class="sroman">‹<span style="font-style: italic">host</span>›</span> and <span class="sroman">‹<span style="font-style: italic">port</span>›</span> fails to respond, and it
+should only import pins if the server reports success with
+status code 200. As long as the HTTP status code from the
+server at <span class="sroman">‹<span style="font-style: italic">host</span>›</span> and <span class="sroman">‹<span style="font-style: italic">port</span>›</span> is 200, then the
+importing server can assume that the place list is well-formed.</p><p>The given <span class="sroman">‹<span style="font-style: italic">host</span>›</span> and <span class="sroman">‹<span style="font-style: italic">port</span>›</span> can refer to same
+server that received the <span class="stt">copy</span> request. In that case, as
+long as no other client is accessing the server at the same
+time, the places of the <span class="stt">person</span> argument on the same server
+will be added as places for the <span class="stt">as</span> argument.</p><p>If the <span class="sroman">‹<span style="font-style: italic">host</span>›</span> and <span class="sroman">‹<span style="font-style: italic">port</span>›</span> server is different
+from the one that receives the <span class="stt">copy</span> request, then the
+<span class="sroman">‹<span style="font-style: italic">host</span>›</span> and <span class="sroman">‹<span style="font-style: italic">port</span>›</span> server’s pin registry is
+queried but <span style="font-weight: bold">not changed</span> by the <span class="stt">copy</span> request. Pins
+change only on the server that receives the <span class="stt">copy</span> request.</p><p>A server that receives a <span class="stt">copy</span> request should not return a
+result to the client until the copy succeeds. The
+result sent back to a client that makes a <span class="stt">copy</span> request is
+the new people and place counts in the same format as for a
+<span class="stt">counts</span> query.</p></li><li><p><span class="stt">/copy?place=</span><span class="sroman">‹<span style="font-style: italic">place</span>›</span><span class="stt">&amp;as=</span><span class="sroman">‹<span style="font-style: italic">place</span>›</span><span class="stt">&amp;host=</span><span class="sroman">‹<span style="font-style: italic">host</span>›</span><span class="stt">&amp;port=</span><span class="sroman">‹<span style="font-style: italic">port</span>›</span>
+—<wbr> Contacts a server running on <span class="sroman">‹<span style="font-style: italic">host</span>›</span> at
+<span class="sroman">‹<span style="font-style: italic">port</span>›</span> to get all of the people who have visited the
+<span class="stt">place</span> argument’s <span class="sroman">‹<span style="font-style: italic">place</span>›</span>, and adds them as having
+visited the <span class="stt">as</span> argument’s <span class="sroman">‹<span style="font-style: italic">place</span>›</span>.</p><p>The details and result of this query are otherwise the same as
+for <span class="stt">copy</span> with a <span class="stt">person</span> argument instead of a
+<span class="stt">place</span> argument.</p></li></ul><p>In the queries described above, arguments to <span class="sroman">‹<span style="font-style: italic">person</span>›</span>,
+<span class="sroman">‹<span style="font-style: italic">place</span>›</span>, etc., should all be interpreted as UTF-8 text with
+the usual encoding within URLs. Basically, that means you don’t have
+to worry about encodings as long as you use the provided parsing
+functions. The order of query parameters should not matter; for
+example, <span class="stt">places</span> might be supplied before <span class="stt">people</span> in a
+<span class="stt">pin</span> request, and the server should treat that the same as
+<span class="stt">people</span> before <span class="stt">places</span>.</p><p>If a query is unrecognized or missing a required argument, your server
+should respond with status 400 (and not crash). If a query has extra
+arguments that are not listed above, your server can ignore them. If
+a query has the same argument multiple times, your server can use any
+one of them; the given header-parsing code will effectively pick one
+for you.</p><p>As an example, suppose that your server has just started running on
+<span class="stt">localhost</span> at port <span class="stt">8090</span>:</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/counts"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">0</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">0</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/pin?people=alice&amp;places=warnock"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">1</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">1</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=alice"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">warnock</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt"></span><span class="nobreak"><span class="stt">$ curl "http://localhost:8090/pin?people=bob%0Acarol&amp;places=warnock%0Amerrill"</span></span><span class="stt"></span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">3</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">2</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/people"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">carol</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">bob</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">alice</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">warnock</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">merrill</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=bob"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">warnock</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">merrill</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=carol"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">warnock</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">merrill</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/unpin?people=alice%0Abob&amp;places=warnock"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">2</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">2</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/people"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">carol</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">bob</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=bob"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">merrill</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=carol"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">warnock</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">merrill</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt"></span><span class="nobreak"><span class="stt">$ curl "http://localhost:8090/copy?host=localhost&amp;port=8090&amp;person=carol&amp;as=alice"</span></span><span class="stt"></span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">3</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">2</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/people"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">carol</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">bob</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">alice</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=alic"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=alice"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">warnock</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">merrill</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/places?person=dan"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/people?place=warnock"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">carol</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">alice</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ curl "http://localhost:8090/people?place=union"</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$</span></p></td></tr></tbody></table><p></p><p>In the responses above, the order of people or places in a response
+can be different than the shown order.</p><h5><a name="(part._availability)"></a>Availability and Client Constraints</h5><p>You must make essentially no assumptions about clients of your server.
+It’s ok to limit the initial request line and header lines to
+<span class="stt">MAXLINE</span> characters. Otherwise, as long as clients follow the HTTP
+protocol and as long as machine resources are not exhausted (including
+memory or allowed TCP connections), your server should continue to
+respond to new requests in a timely manner. Your server must not run
+out of resources as a result of failing to free unneeded memory or
+close finished connections.</p><p>You should make a good effort to report errors to clients, but it’s
+also ok to just drop a client that makes an invalid request. It’s ok
+if communication errors cause the error-checking
+<span class="stt">csapp.</span><span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span> functions to print errors; the starting server
+includes <span class="stt">exit_on_error(0)</span> so that discovered errors are printed
+and the function returns, instead of exiting the server process.</p><p>As long as a client is well behaved, the server should not drop a
+client’s pin addition, even if multiple clients are adding places for
+the same person list at the same time. For example, if three clients
+each add 1000 different places for a person concurrently, the result
+will be a person with 3000 places.</p><p>There is no <span style="font-style: italic">a priori</span> limit on the length of user names or
+time that the server must stay running. If your server runs out of
+memory because the given data is too large, that’s ok. If your server
+crashes because it didn’t expect a user name to have 1 character or to
+have 1,753 characters, that’s not ok. If your server runs out of
+memory because it has a leak and cannot deal with thousands of
+sequential requests to access a person’s place list, that’s also not
+ok.</p><p>We expect that your server exhibits good asymptotic performance.
+Adding <span style="font-style: italic">N</span> places for one person should take <span style="font-style: italic">O</span>(<span style="font-style: italic">N</span>)<span style="font-style: italic"></span> time,
+and adding <span style="font-style: italic">N</span> people for one place should take <span style="font-style: italic">O</span>(<span style="font-style: italic">N</span>)<span style="font-style: italic"></span> time.
+Adding <span style="font-style: italic">N</span> places for <span style="font-style: italic">M</span> people can take <span style="font-style: italic">O</span>(<span style="font-style: italic">NM</span>)<span style="font-style: italic"></span> time.
+Removing one person from one place should take <span style="font-style: italic">O</span>(<span style="font-style: italic"></span>1<span style="font-style: italic"></span>)<span style="font-style: italic"></span> time. Use
+the dictionary routines that we have provided to store people and
+places, and that should provide the right asymptotic performance. Even
+though we may not directly probe asymptotic performance of your
+server, we expect large tests to work.</p><p>We will send arbitrary people and place names through the query
+interface to make sure that they are is reported back intact, and
+we’ll try perverse people and place names such as <span class="stt">&amp;</span> or <span class="stt">"</span>.
+The <span class="stt">"more_string.<span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span>"</span> library provides relevant
+encoding and decoding functions.</p><p>Your server is free to support additional queries other than the ones
+listed in <a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._service-queries%29" data-pltdoc="x">Server Queries</a>.</p><h5><a name="(part._support-libraries)"></a>Support Libraries</h5><p>In addition to <span class="stt">"csapp.<span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span>"</span>, the starting code in
+<span class="stt">servlab-handout.zip</span> includes <span class="stt">"dictionary.<span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span>"</span> and
+<span class="stt">"more_string.<span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span>"</span>.</p><p>The <span class="stt">"dictionary.<span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span>"</span> library provides an
+implementation of dictionaries with case-sensitive or case-insensitive
+keys. When you add to the dictionary, the given string key is copied,
+but the given value pointer is added as-is. When creating a
+dictionary, you supply a function that is used to destroy values in
+the dictionary when they are no longer needed. For example, if data
+values are allocated with <span class="stt">malloc</span>, supply <span class="stt">free</span> to be used to
+destroy data values when <span class="stt">dictionary_free</span> is called or when the
+value is removed or replaced with a different one. See
+<span class="stt">"dictionary.h"</span> for more information.</p><p>The <span class="stt">"more_string.<span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span>"</span> library provides string helpers and
+functions for some basic parsing and encoding functions. See
+<span class="stt">"more_string.h"</span> for details.</p><p>The starting code in <span class="stt">servlab-handout.zip</span> includes some tests:</p><ul><li><p>The <a name="(elem._basic)"></a><span class="stt">"basic.rkt"</span> script exercises
+all query forms and checks server results. If your
+<span class="stt">redpin</span> server is running <span class="stt">localhost</span> at port
+<span class="stt">8090</span>, run <span class="stt">"basic.rkt"</span> as</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ racket basic.rkt localhost 8090</span></p></td></tr></tbody></table><p></p><p>To skip tests that ask the server to contact itself (which
+requires some concurrency), supply <span class="nobreak"><span class="stt">--no-self</span></span>:</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ racket basic.rkt --no-self localhost 8090</span></p></td></tr></tbody></table><p></p><p>The <span class="stt">"basic.rkt"</span> test involves some randomness, but you
+can make it deterministic by supplying a seed with
+<span class="nobreak"><span class="stt">--seed</span></span>:</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ racket basic.rkt --seed 42 localhost 8090</span></p></td></tr></tbody></table><p></p><p>The <span class="stt">"basic.rkt"</span> script also accepts a
+<span class="nobreak"><span class="stt">--keep-going</span></span> flag to make it keep running if a test
+fails, but beware that a failing test may leave the server
+out-of-sync with later tests.</p></li><li><p>The <a name="(elem._trouble)"></a><span class="stt">"trouble.rkt"</span> script helps
+ check how well a server responds to misbehaved clients, and it
+ requires the server to handle concurrent connections. If a
+ server is running on <span class="stt">localhost</span> at port <span class="stt">8090</span>, then</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ racket trouble.rkt localhost 8090</span></p></td></tr></tbody></table><p></p><p>reports its status. If the script doesn’t finish in 5-10
+seconds, then something has gone wrong.</p><p>The <span class="stt">"trouble.rkt"</span> script may cause your server to
+report many connection errors. That’s fine, and you may want to
+redirect output to <span class="stt">/dev/null</span> when running this test.
+There’s only a problem if the <span class="stt">"trouble.rkt"</span> script
+itself reports errors.</p></li><li><p>The <a name="(elem._stress)"></a><span class="stt">"stress.rkt"</span> script throws
+ lots of concurrent queries at a server and uses the <span class="stt">copy</span>
+ query. If a fresh server is running on <span class="stt">localhost</span> at port
+ <span class="stt">8090</span>, then</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ racket stress.rkt localhost 8090</span></p></td></tr></tbody></table><p></p><p>runs the stress test.</p><p>The <span class="stt">"stress.rkt"</span> script assumes that the server state
+is fresh (i.e., no people or places registered). If your server
+prints logging information to <span class="stt">stdout</span> or <span class="stt">stderr</span>, you’ll
+probably want to redirect it to <span class="stt">/dev/null</span> when running this
+test.</p></li></ul><h5><a name="(part._servlab-evalution)"></a>Evaluation</h5><p>We will grade your submission based on the following functionality
+thresholds:</p><ul><li><p>Implementing the server enough to handle the
+<a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28elem._basic%29" data-pltdoc="x"><span class="stt">"basic.rkt"</span> test</a> with
+<span class="nobreak"><span class="stt">--–no-self</span></span> is worth 60 points.</p></li><li><p>Adding concurrency well enough to handle the
+<a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28elem._basic%29" data-pltdoc="x"><span class="stt">"basic.rkt"</span> test</a> without
+<span class="nobreak"><span class="stt">--–no-self</span></span> and also handle
+<a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28elem._trouble%29" data-pltdoc="x"><span class="stt">"trouble.rkt"</span> test</a> is worth 80
+points.</p></li><li><p>Passing the <a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28elem._stress%29" data-pltdoc="x"><span class="stt">"stress.rkt"</span> test</a>
+while limited via <span class="stt">ulimit -v 20971520</span> (to disallow extreme
+leaks) is worth 100 points.</p><p>In <span class="stt">bash</span>, you can run <span class="stt">redpin</span> with the memory limit
+like this:</p><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ (ulimit -v 20971520 ; ./redpin 8090 &gt; /dev/null)</span></p><p>The equivalent command in <span class="stt">csh</span> is</p><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">% (limit vmemoryuse 20971520 ; ./redpin 8090 &gt; /dev/null)</span></p></li><li><p>Failing the memory-leak test <span style="font-style: italic">deducts</span> 15 points,
+independent of the level of completion. We will check for
+memory leaks by starting your server with</p><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ valgrind ./redpin </span><span class="sroman">‹<span style="font-style: italic">port</span>›</span></p><p>running <span class="stt">"basic.rkt"</span>, terminating the server with
+Ctl-C, and checking whether Valgrind reports any memory leaks.
+As long as the output includes</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">All heap blocks were freed -- no leaks are possible</span></p></td></tr></tbody></table><p></p><p>or</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">LEAK SUMMARY:</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt"></span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="stt">definitely lost: 0 bytes in 0 blocks</span></p></td></tr></tbody></table><p></p><p>then Valgrind found no leak.</p><p>You don’t need to perform any special handling of Ctl-C. When
+Ctl-C terminates your server, Valgrind won’t trat remaining
+allocated objects as a leak—<wbr>as long as they would have been
+accessible if the program kept running.</p></li></ul><h5><a name="(part._servlab-tips)"></a>Tips</h5><ul><li><p>Pay attention to the ownership rules for values added to or
+extracted from a dictionary. See <a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html#%28part._support-libraries%29" data-pltdoc="x">Support Libraries</a>
+and the comments in <span class="stt">"dictionary.h"</span>.</p></li><li><p>If you use a dictionary to map keys to <span class="stt">NULL</span> values, then
+the dictionary effectively implements a set. Note that you can
+specify <span class="stt">NULL</span> instead of a value-destroying function when
+creating a dictionary to indicate that values do not need to be
+destroyed.</p></li><li><p>Don’t try to store a set of people or places as one string. If
+you represent a set of places as a dictionary, and if you also
+map each person to a set of places using a dictionary, then
+you’ll have a dictionary of dictionaries—<wbr>which is a good
+idea.</p></li><li><p>People and places are symmetric in <span class="stt">redpin</span>. Consider
+using one dictionary that maps people to places plus another
+dictionary that maps places to people. Although that strategy
+that keeps all information in two ways, it makes all operations
+have a suitable asymtoptic complexity.</p></li><li><p>Since people and places are symmetric in <span class="stt">redpin</span>, you may
+be tempted to copy code that works on people to make it work on
+places or vice versa. When you do that, remember that you’re
+copying all the bugs, too. A better strategy is to write one
+piece of code that is parameterzied over people or places.</p></li><li><p>If you get seg faults or if values seem to be changing out from
+under you, don’t forget to try tools like Valgrind and
+<span class="stt">gdb</span>.</p></li><li><p>Use functions like <span class="stt">query_encode</span> to ensure that an unusual
+user name or user string doesn’t create trouble when embedded
+in a URL.</p></li><li><p>More generally, you don’t want to be in the business of
+encoding, decoding, or parsing strings. If you find yourself
+having to parse, encode, or decode a string, check again
+whether functions in <span class="stt">"more_string.<span class="sroman">[</span><span class="stt">ch</span><span class="sroman">]</span>"</span> could
+be used for the job—<wbr>maybe with a slightly different
+approach to the communication pattern.</p></li><li><p>You’ll need to use <span class="stt">Pthread_create</span> to make your server handle
+multiple clients concurrently, but it makes sense to add concurrency
+as a last step.</p></li><li><p>When you do add concurrency, you’ll need to make sure that uses
+of your people and places tables are properly synchronized. The
+<span class="stt">"stress.rkt"</span> script mostly tries to check your
+server’s synchronization.</p></li><li><p>If your server leaks when exercised via <span class="stt">"basic.rkt"</span>,
+try using <span class="nobreak"><span class="stt">--leak-check=full</span></span> with Valgrind (just like that
+Valgrind output suggests) to get more information about the
+source of the leak.</p></li></ul><div class="navsetbottom"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html" title="backward to &quot;Malloc Assignment&quot;" data-pltdoc="x">← prev</a>&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" title="up to &quot;Homework Assignments&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<span class="nonavigation">next →</span></span>&nbsp;</div></div></div><div id="contextindicator">&nbsp;</div></body></html>

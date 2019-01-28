@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0047)https://pubweb.eng.utah.edu/~cs4400/malloc.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=0.8"><title>Malloc Assignment</title><link rel="stylesheet" type="text/css" href="./Malloc Assignment_files/scribble.css" title="default"><link rel="stylesheet" type="text/css" href="./Malloc Assignment_files/manual-style.css" title="default"><style type="text/css">
+.tocset { background-color: hsl(87.5, 24%, 52.5%); }
+</style><link rel="stylesheet" type="text/css" href="./Malloc Assignment_files/manual-racket.css" title="default"><script type="text/javascript" src="./Malloc Assignment_files/scribble-common.js"></script><script type="text/javascript" src="./Malloc Assignment_files/manual-racket.js"></script><!--[if IE 6]><style type="text/css">.SIEHidden { overflow: hidden; }</style><![endif]--></head><body id="scribble-racket-lang-org"><div class="tocset"><div class="tocview"><div class="tocviewlist tocviewlisttopspace"><div class="tocviewtitle"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_0&quot;);">►</a></td><td></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html" class="tocviewlink" data-pltdoc="x">CS 4400 – Computer Systems &nbsp; Fall 2018</a></td></tr></tbody></table></div><div class="tocviewsublisttop" style="display: none;" id="tocview_0"><table cellspacing="0" cellpadding="0"><tbody><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._.Schedule__subject_to_change_%29" class="tocviewlink" data-pltdoc="x">Schedule <span class="Smaller">[subject to change]</span></a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._staff%29" class="tocviewlink" data-pltdoc="x">Course Staff</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._desc%29" class="tocviewlink" data-pltdoc="x">Course Description</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._.Videos%29" class="tocviewlink" data-pltdoc="x">Videos</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._.No_.Videos%29" class="tocviewlink" data-pltdoc="x">No Videos</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" class="tocviewselflink" data-pltdoc="x">Homework Assignments</a></td></tr></tbody></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_1&quot;);">▼</a></td><td></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" class="tocviewlink" data-pltdoc="x">Homework Assignments</a></td></tr></tbody></table><div class="tocviewsublist" style="display: block;" id="tocview_1"><table cellspacing="0" cellpadding="0"><tbody><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/bomb.html" class="tocviewlink" data-pltdoc="x">Bomb Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/performance.html" class="tocviewlink" data-pltdoc="x">Performance Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/linklab.html" class="tocviewlink" data-pltdoc="x">Linking Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/shell.html" class="tocviewlink" data-pltdoc="x">Shell Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html" class="tocviewselflink" data-pltdoc="x">Malloc Assignment</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html" class="tocviewlink" data-pltdoc="x">Server Assignment</a></td></tr></tbody></table></div></div><div class="tocviewlist"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="width: 1em;"><a href="javascript:void(0);" title="Expand/Collapse" class="tocviewtoggle" onclick="TocviewToggle(this,&quot;tocview_2&quot;);">►</a></td><td></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html" class="tocviewselflink" data-pltdoc="x">Malloc Assignment</a></td></tr></tbody></table><div class="tocviewsublistbottom" style="display: none;" id="tocview_2"><table cellspacing="0" cellpadding="0"><tbody><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._.Getting_.Started%29" class="tocviewlink" data-pltdoc="x">Getting Started</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._.How_to_.Work_on_the_.Lab%29" class="tocviewlink" data-pltdoc="x">How to Work on the Lab</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._usemem%29" class="tocviewlink" data-pltdoc="x">Driver Program</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._.Programming_.Rules%29" class="tocviewlink" data-pltdoc="x">Programming Rules</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._malloc-evaluation%29" class="tocviewlink" data-pltdoc="x">Evaluation</a></td></tr><tr><td align="right"></td><td><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._malloc-tips%29" class="tocviewlink" data-pltdoc="x">Tips</a></td></tr></tbody></table></div></div></div><div class="tocsub"><div class="tocsubtitle">On this page:</div><table class="tocsublist" cellspacing="0"><tbody><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._.Getting_.Started%29" class="tocsubseclink" data-pltdoc="x">Getting Started</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._.How_to_.Work_on_the_.Lab%29" class="tocsubseclink" data-pltdoc="x">How to Work on the Lab</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._usemem%29" class="tocsubseclink" data-pltdoc="x">Driver Program</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._.Programming_.Rules%29" class="tocsubseclink" data-pltdoc="x">Programming Rules</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._malloc-evaluation%29" class="tocsubseclink" data-pltdoc="x">Evaluation</a></td></tr><tr><td><span class="tocsublinknumber"></span><a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._malloc-tips%29" class="tocsubseclink" data-pltdoc="x">Tips</a></td></tr></tbody></table></div></div><div class="maincolumn"><div class="main"><div class="navsettop"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/shell.html" title="backward to &quot;Shell Assignment&quot;" data-pltdoc="x">← prev</a>&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" title="up to &quot;Homework Assignments&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html" title="forward to &quot;Server Assignment&quot;" data-pltdoc="x">next →</a></span>&nbsp;</div><h4><a name="(part._malloc)"></a>Malloc Assignment</h4><blockquote class="refpara"><blockquote class="refcolumn"><blockquote class="refcontent"><p>This malloc assignment is based on the one by Bryant and O’Hallaron for
+<span style="font-style: italic">Computer Systems: A Programmer’s Perspective</span>,
+Third Edition</p></blockquote></blockquote></blockquote><p>Due: Wednesday, November 21, 11:59pm</p><p>In this lab, you’ll write a dynamic storage allocator for C programs,
+i.e., your own version of the <span class="stt">malloc</span> and <span class="stt">free</span> functions.
+Specifically, your library will provide <span class="stt">mm_malloc</span> and
+<span class="stt">mm_free</span> analogous to <span class="stt">malloc</span> and <span class="stt">free</span>.</p><h5><a name="(part._.Getting_.Started)"></a>Getting Started</h5><p>Start by unpacking
+<a href="https://pubweb.eng.utah.edu/~cs4400/malloclab-handout.zip"><span class="stt">malloclab-handout.zip</span></a>.
+The only file you will be modifying and handing in is <span class="stt">"mm.c"</span>.
+The <span class="stt">"usemem.c"</span> program is a driver program that allows you
+to test and evaluate your solution, where a command-line flag selects
+a test mode. Use <span class="stt">make</span> to generate the driver code and run it as,
+for example,</p><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">$ ./usemem --single</span></p><p>See <a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._usemem%29" data-pltdoc="x">Driver Program</a> for information about command-line flags to
+<span class="stt">usemem</span>.</p><p>When you have completed the lab, you will hand in only one file,
+<span class="stt">"mm.c"</span>, which contains your solution.</p><h5><a name="(part._.How_to_.Work_on_the_.Lab)"></a>How to Work on the Lab</h5><p>Your dynamic storage allocator will consist of the following three
+functions, which are declared in <span class="stt">"mm.h"</span> and defined in
+<span class="stt">"mm.c"</span>:</p><p></p><table cellspacing="0" cellpadding="0"><tbody><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">int</span><span class="hspace">&nbsp;&nbsp;&nbsp;</span><span class="stt">mm_init(void *heap, size_t heap_size);</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">void *mm_malloc(size_t size);</span></p></td></tr><tr><td><p><span class="hspace">&nbsp;&nbsp;</span><span class="stt">void</span><span class="hspace">&nbsp;&nbsp;</span><span class="stt">mm_free(void *ptr);</span></p></td></tr></tbody></table><p></p><p>The <span class="stt">"mm.c"</span> file that we have given you implements a very
+simple allocator that handles a single allocation block. It passes
+only the <span class="nobreak"><span class="stt">--single</span></span> testing mode of <span class="stt">usemem</span>. You will need
+to improve the allocator to pass other modes.</p><ul><li><p><span class="stt">mm_init</span>: Before calling <span class="stt">mm_malloc</span> or <span class="stt">mm_free</span>, the
+driver program calls <span class="stt">mm_init</span> to perform any necessary
+initialization, such as setting up the initial heap area. The
+<span class="stt">mm_init</span> function is called with a pointer to memory
+(allocated via <span class="stt">mmap</span>) as its first argument, and the second
+argument is the size of that memory region in bytes. The heap
+pointer and heap size are both page-aligned, which also means
+that they’re aligned to 16 bytes, and the heap size is at least
+4096.</p><p>Your allocator must not call <span class="stt">mmap</span>, <span class="stt">sbrk</span>, or
+<span class="stt">malloc</span>. It must perform all allocation in the memory region
+provided to <span class="stt">mm_init</span>, which should be sufficient to run the
+associated tests as long as your allocator’s per-block overhead
+is small enough (see <a href="https://pubweb.eng.utah.edu/~cs4400/malloc.html#%28part._malloc-evaluation%29" data-pltdoc="x">Evaluation</a>).</p><p>In <span class="stt">usemem</span>’s <span class="nobreak"><span class="stt">--timing</span></span> mode, the <span class="stt">mm_init</span>
+function is called more than once. Your <span class="stt">mm_init</span> function
+should reset your implementation to its initial state for each
+call.</p></li><li><p><span class="stt">mm_malloc</span>: The <span class="stt">mm_malloc</span> function returns a pointer to
+an allocated block payload of at least <span class="stt">size</span> bytes, where
+<span class="stt">size</span> is greater than <span style="font-style: italic"></span>0<span style="font-style: italic"></span> and less than <span style="font-style: italic"></span>2<span style="font-style: italic"></span><span style="vertical-align: super; font-size: 80%"><span style="font-style: italic"></span>3<span style="font-style: italic"></span>2<span style="font-style: italic"></span></span><span style="font-style: italic"></span>. The entire allocated block
+must lie within the heap region, the payload pointer must be
+aligned to 16 bytes, and the block must not overlap with any
+other allocated block.</p><p>If the allocator does not have space to accomodate the requested
+block, it must return <span class="stt">NULL</span> (as opposed to crashing or
+returning a bad block).</p></li><li><p><span class="stt">mm_free</span>: The <span class="stt">mm_free</span> function frees the block for the
+given payload pointer. It returns nothing.</p></li></ul><p>Beyond correctness, your goal is to produce an allocator that performs
+well in time and space. That is, the <span class="stt">mm_malloc</span> and <span class="stt">mm_free</span>
+functions should should stay close enough to the amount of memory
+needed to hold the payload of <span class="stt">mm_malloc</span> calls, and it should work
+quickly enough. The higher levels of completion correspond to lower
+overhead and higher performance.</p><h5><a name="(part._usemem)"></a>Driver Program</h5><p>The <span class="stt">usemem</span> program calls <span class="stt">mm_init</span>, <span class="stt">mm_malloc</span>, and
+<span class="stt">mm_free</span> in different patterns to exercise your allocator in
+different, increasingly demanding ways, parameterzied by a count
+<span style="font-style: italic">n</span>, size <span style="font-style: italic">s</span>, and iteration count <span style="font-style: italic">iters</span>.</p><ul><li><p><span class="nobreak"><span class="stt">--single</span></span> : allocates a single block of size <span style="font-style: italic">s</span> and
+frees it. A second allocation is attempted, but a result of
+NULL is accepted. The initial and (possibly) second allocated
+block are freed. This combination is repeated <span style="font-style: italic">iters</span>
+times.</p><p>Even the starting code’s allocator passes in this mode.</p></li><li><p><span class="nobreak"><span class="stt">--singles</span></span> : allocates <span style="font-style: italic">n</span> blocks that are all of
+size <span style="font-style: italic">n</span>. The blocks are deallocated via <span class="stt">mm_free</span> in
+different orders for different iterations, where the
+<span class="stt">mm_malloc</span>-all, <span class="stt">mm_free</span>-all sequence is repeated
+<span style="font-style: italic">iters</span> times.</p><p>The initial heap given to <span class="stt">mm_init</span> is big enough to allow
+up to 32 bytes of overhead per allocated block or 16 bytes per
+allocated block with <span class="nobreak"><span class="stt">--compact</span></span>. It also allows payload
+sizes to be rounded up to the next multiple of 16. Finally, it
+allows 64 extra bytes, which might be used for prolog and/or
+terminator blocks.</p><p>An allocator with an implicit free list and without coalescing
+can pass in this mode.</p></li><li><p><span class="nobreak"><span class="stt">--excessive</span></span> : allocates blocks between <span style="font-style: italic">s</span> and
+<span style="font-style: italic"></span>2<span style="font-style: italic">s</span> in size, but keeps allocating until <span class="stt">mm_malloc</span>
+returns <span class="stt">NULL</span>. All of the blocks are freed, and the
+<span class="stt">mm_malloc</span>-all, <span class="stt">mm_free</span>-all sequence is repeated
+<span style="font-style: italic">iters</span> times.</p><p>Any allocator should pass in this mode, which just checks that
+the allocator eventually returns <span class="stt">NULL</span> and can continue to
+work afterward.</p></li><li><p><span class="nobreak"><span class="stt">--shrinking</span></span> : allocates <span style="font-style: italic"></span>1<span style="font-style: italic"></span> block of size
+<span style="font-style: italic">n*s/</span>2<span style="font-style: italic"></span>, frees it, and allocates <span style="font-style: italic"></span>2<span style="font-style: italic"></span> blocks of size
+<span style="font-style: italic">n*s/</span>4<span style="font-style: italic"></span>, and so on. The <span style="font-style: italic">iters</span> parameter is not
+used.</p><p>An allocator with an implicit free list and without coalescing
+can pass in this mode, but an allocator that splits blocks
+badly can fail.</p></li><li><p><span class="nobreak"><span class="stt">--growing</span></span> : allocates <span style="font-style: italic">n</span> blocks of size <span style="font-style: italic">s</span>,
+frees them all, allocates <span style="font-style: italic">n/</span>2<span style="font-style: italic"></span> blocks of size <span style="font-style: italic"></span>2<span style="font-style: italic">s</span>,
+and so on. The progression from small to large blocks is
+repeated <span style="font-style: italic">iters</span> times.</p><p>An allocator with an implicit free list and with coalescing can
+pass in this mode.</p></li><li><p><span class="nobreak"><span class="stt">--timing</span></span> : allocates <span style="font-style: italic">n</span> blocks of size <span style="font-style: italic">s</span> to
+<span style="font-style: italic"></span>2<span style="font-style: italic">s</span>, frees half of them, allocates replacements, and then
+frees all of the blocks. This pattern is repeated <span style="font-style: italic">iters</span>
+times, and the total run time is recorded. Then, the whole
+process is repeated with an <span style="font-style: italic">n</span> that is four times as
+large to check whether the recorded time is roughly linear in
+<span style="font-style: italic">n</span>.</p><p>An allocator with an explicit free list and with coalescing can
+pass in this mode, as long as insertion into and removal from
+the free list is constant-time.</p></li></ul><p>Independent of the mode, <span class="stt">usemem</span> also accepts the following
+flags:</p><ul><li><p><span class="nobreak"><span class="stt">--n</span></span> <span style="font-style: italic">n</span> : sets <span style="font-style: italic">n</span>.</p></li><li><p><span class="nobreak"><span class="stt">--s</span></span> <span style="font-style: italic">s</span> : sets <span style="font-style: italic">s</span>.</p></li><li><p><span class="nobreak"><span class="stt">--iters</span></span> <span style="font-style: italic">iters</span> : sets <span style="font-style: italic">iters</span>.</p></li><li><p><span class="nobreak"><span class="stt">--compact</span></span> : reduces the amount of heap space given to the
+allocator. Normally, enough space is given for the mode’s
+allocation assuming 32 bytes of overhead per block, but
+<span class="nobreak"><span class="stt">--compact</span></span> reduces the assumed overhead to 16 bytes per
+block.</p></li></ul><h5><a name="(part._.Programming_.Rules)"></a>Programming Rules</h5><ul><li><p>Your <span class="stt">"mm.c"</span> must be implemented in ANSI standard C
+with GNU extensions, as always.</p></li><li><p>You must not change any of the interfaces in <span class="stt">"mm.c"</span>.
+We will compile your <span class="stt">"mm.c"</span> with a fresh copy of the
+driver files.</p></li><li><p>You must not invoke any memory-management related library
+calls or system calls, including <span class="stt">mmap</span>, <span class="stt">malloc</span>,
+<span class="stt">calloc</span>, <span class="stt">free</span>, <span class="stt">realloc</span>, <span class="stt">sbrk</span>, <span class="stt">brk</span>, or
+any variants.</p></li><li><p>You must not define any global or <span class="stt">static</span> compound
+variables such as arrays, structs, trees, or lists in your
+<span class="stt">"mm.c"</span> program. However, you <span style="font-style: italic">are</span> allowed to
+declare types (including <span class="stt">struct</span> types) in <span class="stt">"mm.c"</span>,
+and you <span style="font-style: italic">are</span> allowed to declare global scalar variables
+such as integers, floats, and pointers in <span class="stt">"mm.c"</span>.</p></li></ul><h5><a name="(part._malloc-evaluation)"></a>Evaluation</h5><p>Your grade will be calculated as follows:</p><ul><li><p>A program that passes in <span class="nobreak"><span class="stt">--single</span></span>, <span class="nobreak"><span class="stt">--singles</span></span>,
+<span class="nobreak"><span class="stt">--excessive</span></span>, and <span class="nobreak"><span class="stt">--shrinking</span></span> modes will receive 60
+points.</p></li><li><p>A program that additionally passes in <span class="nobreak"><span class="stt">--growing</span></span> mode will
+receive 80 points.</p></li><li><p>A program that passes with <span class="nobreak"><span class="stt">--compact</span></span> in all modes except
+<span class="nobreak"><span class="stt">--timing</span></span> will receive 90 points.</p></li><li><p>A program that additionally passes in <span class="nobreak"><span class="stt">--timing</span></span> mode (with
+and without <span class="nobreak"><span class="stt">--compact</span></span>) will receive 100 points.</p></li></ul><p>The makefile provides <span class="stt">test60</span>, <span class="stt">test80</span>, <span class="stt">test90</span>, and
+<span class="stt">test100</span> targets that run tests for all modes for the
+corresponding grade. The tests include varying <span style="font-style: italic">n</span> and <span style="font-style: italic">s</span>
+values, and all combinations must pass. Running all tests should take
+under 1 second.</p><h5><a name="(part._malloc-tips)"></a>Tips</h5><ul><li><p>Compile with <span class="stt">gcc -g</span> and use a debugger. A debugger will
+help you isolate and identify out of bounds memory references.</p></li><li><p>Understand every line of the malloc implementations in the
+slides. The slides have a detailed example of a simple allocator
+based on an implicit free list, and the slides also have useful
+code fragments for explicit free lists.</p><p>But beware:</p><ul><li><p>The slides discuss <span class="stt">sbrk</span>-based allocators and
+<span class="stt">mmap</span>-based allocators, and your task is neither,
+since <span class="stt">mm_init</span> is called with all of the memory that
+your allocator gets to use. Fortunately, that constraint
+makes the problem simpler.</p></li><li><p>Code in the slides includes a small mistake that does
+not make the allocator misbehave in general, but it
+makes the allocator suffer from unnecessary
+fragmentation in some cases. Since <span class="stt">usemem</span>
+constrains the heap size used by the allocator, to avoid
+running out of memory in some cases, you’ll need to
+discover and repair that inefficiency.</p></li></ul></li><li><p>Encapsulate your pointer arithmetic in functions or C
+preprocessor macros. Pointer arithmetic in memory managers is
+confusing and error-prone because of all the casting that is
+necessary. You can reduce the complexity significantly by
+writing macros for your pointer operations. See the textbook and
+slides for examples.</p></li><li><p>If you use macros, put each use of a macro argument in
+parentheses within the macro definition, and always put
+parentheses around the right-hand side of a macro definition.
+Otherwise, it’s easy to write macros that parse differently than
+you expect when the macro is textually expanded.</p></li></ul><div class="navsetbottom"><span class="navleft"><div class="nosearchform"></div>&nbsp;&nbsp;</span><span class="navright">&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/shell.html" title="backward to &quot;Shell Assignment&quot;" data-pltdoc="x">← prev</a>&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/index.html#%28part._hw%29" title="up to &quot;Homework Assignments&quot;" data-pltdoc="x">up</a>&nbsp;&nbsp;<a href="https://pubweb.eng.utah.edu/~cs4400/servlab.html" title="forward to &quot;Server Assignment&quot;" data-pltdoc="x">next →</a></span>&nbsp;</div></div></div><div id="contextindicator">&nbsp;</div></body></html>

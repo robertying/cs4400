@@ -1,0 +1,249 @@
+
+<!-- saved from url=(0049)https://pubweb.eng.utah.edu/~cs4400/u0000000.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Match Assignment for u0000000</title></head>
+<body style="width: 40em; margin-left: auto; margin-right: auto;">
+<h1>Match Assignment for u0000000</h1>
+
+<p>The goal of this assignment is to give you some practice with C on a problem
+that is algorithmically straightforward but difficult to get right on a first try.
+With any luck, you'll have a bug along the way, and then you get to practice using GDB.</p>
+
+<p>Your task is to implement a program that takes command-line arguments
+and checks whether each argument matches a particular pattern. The pattern to check
+is determined by a command-line flag: <tt style="white-space: nowrap">-a</tt>, <tt style="white-space: nowrap">-b</tt>, or <tt style="white-space: nowrap">-c</tt>, where the default
+mode is <tt style="white-space: nowrap">-a</tt>. The patterns for each flag are described below.</p>
+
+<p>By default, your program should print “yes” (always lowercase, no extra space) for each matching
+argument and “no”  (always lowercase, no extra space) for each non-matching argument, each on a separate line.
+If the <tt style="white-space: nowrap">-t</tt> flag is provided,
+then your program should instead print nothing for non-matching argument and
+it should print a converted value for each matching argument. Each pattern mode
+has an associated conversion, as described below.</p>
+
+<p>At most one of <tt style="white-space: nowrap">-a</tt>, <tt style="white-space: nowrap">-b</tt>, or <tt style="white-space: nowrap">-c</tt> will be provided. A <tt style="white-space: nowrap">-t</tt>
+flag can be provided before or after any of <tt style="white-space: nowrap">-a</tt>, <tt style="white-space: nowrap">-b</tt>, and <tt style="white-space: nowrap">-c</tt>.
+All flags (i.e,. up to two of them) precede other command-line arguments. A non-flag
+argument never starts with <tt style="white-space: nowrap">-</tt>. All arguments are in ASCII.</p>
+
+<p>See the end of this page for example command-line uses of your program. <i>Neither
+the examples there nor the examples for indvidual patterns are meant to be exhaustive.</i></p>
+
+<p><b>Constraints:</b> Your implementation must be in ANSI C, so that it compiles without
+errors or extra flags on the CADE <tt>lab1-<i>n</i>.eng.utah.edu</tt> machines using the default <tt style="white-space: nowrap">gcc</tt>.
+Your implementation must not depend on any libraries other than the standard C
+library; please note that while <tt style="white-space: nowrap">"regex.h"</tt> and its associated functions are POSIX-standard,
+they are not part of ANSI C and therefore not allowed in this
+assignment. Also, yor implementation must not use multiplication, division, or modulo operators. (Bitwise operations offer
+alternatives to those operations.) You should hand in one
+<tt>matchlab.c</tt> file so that <tt>gcc -o matchlab matchlab.c</tt>
+on a CADE lab machine builds your program as <tt>matchlab</tt>; your program should
+work the same with and without debugging and optimization options such as <tt style="white-space: nowrap">-g</tt> or <tt style="white-space: nowrap">-O2</tt>. Hand in via
+<a href="https://utah.instructure.com/courses/459470">Canvas</a>.</p>
+
+<p><b>Important!</b> Make sure the uID listed at the top of the page is correct,
+because this assignment (and its correct answer) is uID-specific.</p>
+
+<p>Where the descriptions below say “even position” or “odd position”,
+counting is from 0, as in C. So, a first character is in an even position.</p>
+<h2><tt><tt style="white-space: nowrap">-a</tt></tt> mode</h2>
+Match a sequence of the following, with nothing else before, after, or in between:
+<ul>
+ <li> any odd number of repetitions of the letter “c”;</li>
+ <li> exactly one “=”;</li>
+ <li> between 2 and 5 repetitions (inclusive) of the letter “r”;</li>
+ <li> exactly one “,”; and</li>
+ <li> an odd number of uppercase letters.</li>
+</ul>
+
+For matches, perform the following conversion:
+<ul>
+ <li> replace each character by the last one.</li>
+</ul>
+
+Example arguments that match, followed by their conversions:
+<ul>
+<li>  <tt>ccc=rrrr,HCA</tt><br>
+     → <tt>AAAAAAAAAAAA</tt></li>
+<li>  <tt>ccccccccc=rrr,GCE</tt><br>
+     → <tt>EEEEEEEEEEEEEEEEE</tt></li>
+<li>  <tt>ccccccc=rrr,FEG</tt><br>
+     → <tt>GGGGGGGGGGGGGGG</tt></li>
+<li>  <tt>c=rrr,G</tt><br>
+     → <tt>GGGGGGG</tt></li>
+<li>  <tt>c=rrrr,FGE</tt><br>
+     → <tt>EEEEEEEEEE</tt></li>
+<li>  <tt>c=rr,EEEHE</tt><br>
+     → <tt>EEEEEEEEEE</tt></li>
+<li>  <tt>ccc=rrr,ECEBC</tt><br>
+     → <tt>CCCCCCCCCCCCC</tt></li>
+<li>  <tt>ccccc=rrr,BFB</tt><br>
+     → <tt>BBBBBBBBBBBBB</tt></li>
+<li>  <tt>ccccc=rr,ABC</tt><br>
+     → <tt>CCCCCCCCCCCC</tt></li>
+<li>  <tt>c=rrr,BBFBE</tt><br>
+     → <tt>EEEEEEEEEEE</tt></li>
+</ul>
+
+Example arguments that do not match:
+<ul>
+<li>  <tt>.ccc=rrrr,HCA</tt></li>
+<li>  <tt>ccc=rrrr,HCA.</tt></li>
+<li>  <tt>e=rrr,ADBEA</tt></li>
+<li>  <tt>=vvvvvvv,EFA</tt></li>
+<li>  <tt>ccccccccc=wwwwwww_BFG</tt></li>
+<li>  <tt>ccccc,rr:H</tt></li>
+<li>  <tt>ccccccc=oo=B</tt></li>
+<li>  <tt>ccccccc:rr,E</tt></li>
+<li>  <tt>ccccccc=ppppppp,A</tt></li>
+<li>  <tt>ccccccc=rrrr:BGC</tt></li>
+<li>  <tt>ccccccc=rrrr_ADC</tt></li>
+<li>  <tt>ccccccc=rr=BFCHB</tt></li>
+<li>  <tt>rrr,B=ccccccc</tt></li>
+<li>  <tt>rrrr,cccccccccHFE=</tt></li>
+</ul>
+<h2><tt><tt style="white-space: nowrap">-b</tt></tt> mode</h2>
+Match a sequence of the following, with nothing else before, after, or in between:
+<ul>
+ <li> 0 or more repetitions of the letter “g”;</li>
+ <li> exactly one “,”;</li>
+ <li> an odd number of uppercase letters — call this sequence <i>X</i>;</li>
+ <li> 3 or more repetitions of the letter “w”;</li>
+ <li> exactly one “_”;</li>
+ <li> the same character sequence as <i>X</i>, but reversed; and</li>
+ <li> between 1 and 3 (inclusive) decimal digits.</li>
+</ul>
+
+For matches, perform the following conversion:
+<ul>
+ <li> after each character, insert a digit that is the position of the character modulo 8.</li>
+</ul>
+
+Example arguments that match, followed by their conversions:
+<ul>
+<li>  <tt>ggggggg,BEFwwwwwwww_FEB310</tt><br>
+     → <tt>g0g1g2g3g4g5g6,7B0E1F2w3w4w5w6w7w0w1w2_3F4E5B6371001</tt></li>
+<li>  <tt>ggggggggg,BCCwwwwwwww_CCB157</tt><br>
+     → <tt>g0g1g2g3g4g5g6g7g0,1B2C3C4w5w6w7w0w1w2w3w4_5C6C7B0115273</tt></li>
+<li>  <tt>gg,Gwwwwwww_G866</tt><br>
+     → <tt>g0g1,2G3w4w5w6w7w0w1w2_3G4856667</tt></li>
+<li>  <tt>gggg,HGDHFwwwwww_FHDGH189</tt><br>
+     → <tt>g0g1g2g3,4H5G6D7H0F1w2w3w4w5w6w7_0F1H2D3G4H5168790</tt></li>
+<li>  <tt>ggggg,Ewwwwwww_E891</tt><br>
+     → <tt>g0g1g2g3g4,5E6w7w0w1w2w3w4w5_6E7809112</tt></li>
+<li>  <tt>gggggggg,GEHwwwwwwww_HEG131</tt><br>
+     → <tt>g0g1g2g3g4g5g6g7,0G1E2H3w4w5w6w7w0w1w2w3_4H5E6G7103112</tt></li>
+<li>  <tt>ggggggggg,FAFwwwwwwww_FAF794</tt><br>
+     → <tt>g0g1g2g3g4g5g6g7g0,1F2A3F4w5w6w7w0w1w2w3w4_5F6A7F0719243</tt></li>
+<li>  <tt>gggg,Gwwwwwwww_G142</tt><br>
+     → <tt>g0g1g2g3,4G5w6w7w0w1w2w3w4w5_6G7104122</tt></li>
+<li>  <tt>gggggg,GGGDHwwwwwwww_HDGGG338</tt><br>
+     → <tt>g0g1g2g3g4g5,6G7G0G1D2H3w4w5w6w7w0w1w2w3_4H5D6G7G0G1323384</tt></li>
+<li>  <tt>ggggggggg,AEFwwwwwww_FEA843</tt><br>
+     → <tt>g0g1g2g3g4g5g6g7g0,1A2E3F4w5w6w7w0w1w2w3_4F5E6A7804132</tt></li>
+</ul>
+
+Example arguments that do not match:
+<ul>
+<li>  <tt>.ggggggg,BEFwwwwwwww_FEB310</tt></li>
+<li>  <tt>ggggggg,BEFwwwwwwww_FEB310.</tt></li>
+<li>  <tt>dd,ECDFBpppp_CF204</tt></li>
+<li>  <tt>ll,AEEBGyyyyyyy_GBEEA473</tt></li>
+<li>  <tt>gg:GFDBFwwwwwwwww_FBDFG348</tt></li>
+<li>  <tt>gggggg,GDBDFwwwwww:FDBDG373</tt></li>
+<li>  <tt>gggggggg,HEFCEttttttttt_ECFEH513</tt></li>
+<li>  <tt>g,FHBttttttttt_BHF452</tt></li>
+<li>  <tt>g,Ewwwwwww:E575</tt></li>
+<li>  <tt>ggg=FGCwwwwww_FGCFGCFGCFGC323</tt></li>
+<li>  <tt>gggg=Cwwwwwwwww_C423</tt></li>
+<li>  <tt>ggg,FDBrrrrrrrrr_BDF46</tt></li>
+<li>  <tt>665wwwwwwwggggggggg_FCA,ACF</tt></li>
+<li>  <tt>_CHEGHHGEHCgggggggwwwwwwww720,</tt></li>
+</ul>
+<h2><tt><tt style="white-space: nowrap">-c</tt></tt> mode</h2>
+Match a sequence of the following, with nothing else before, after, or in between:
+<ul>
+ <li> any odd number of repetitions of the letter “j”;</li>
+ <li> exactly one “_”;</li>
+ <li> an odd number of uppercase letters — call this sequence <i>X</i>;</li>
+ <li> any odd number of repetitions of the letter “u”;</li>
+ <li> exactly one “_”;</li>
+ <li> the same characters as the odd-positioned characters in <i>X</i>; and</li>
+ <li> between 1 and 3 (inclusive) decimal digits.</li>
+</ul>
+
+For matches, perform the following conversion:
+<ul>
+ <li> remove every “E” and “G”.</li>
+</ul>
+
+Example arguments that match, followed by their conversions:
+<ul>
+<li>  <tt>jjj_Euuuuu_748</tt><br>
+     → <tt>jjj_uuuuu_748</tt></li>
+<li>  <tt>jjjjjjjjj_AAHu_A269</tt><br>
+     → <tt>jjjjjjjjj_AAHu_A269</tt></li>
+<li>  <tt>jjjjjjj_Au_180</tt><br>
+     → <tt>jjjjjjj_Au_180</tt></li>
+<li>  <tt>jjjjjjjjj_EBDu_B187</tt><br>
+     → <tt>jjjjjjjjj_BDu_B187</tt></li>
+<li>  <tt>j_Eu_312</tt><br>
+     → <tt>j_u_312</tt></li>
+<li>  <tt>j_Duuuuuuuuu_618</tt><br>
+     → <tt>j_Duuuuuuuuu_618</tt></li>
+<li>  <tt>jjj_Cuuuuuuuuu_277</tt><br>
+     → <tt>jjj_Cuuuuuuuuu_277</tt></li>
+<li>  <tt>jjj_EBHDHuuuuu_BD912</tt><br>
+     → <tt>jjj_BHDHuuuuu_BD912</tt></li>
+<li>  <tt>j_Fu_629</tt><br>
+     → <tt>j_Fu_629</tt></li>
+<li>  <tt>jjjjj_BGHu_G931</tt><br>
+     → <tt>jjjjj_BHu_931</tt></li>
+</ul>
+
+Example arguments that do not match:
+<ul>
+<li>  <tt>.jjj_Euuuuu_748</tt></li>
+<li>  <tt>jjj_Euuuuu_748.</tt></li>
+<li>  <tt>iiiiiii=CDHDAwwwwwwwww_DD886</tt></li>
+<li>  <tt>hh_HGGuuu_G892</tt></li>
+<li>  <tt>jjjjjjj_HBDuuuuu,B307</tt></li>
+<li>  <tt>j_BDDrr_D81</tt></li>
+<li>  <tt>jjj_HGAvvvvvvv=G998</tt></li>
+<li>  <tt>jjjjj_ACFEGqqqqqq_CE688</tt></li>
+<li>  <tt>aaaaaaaa_CCEuuuuuuu_C526</tt></li>
+<li>  <tt>j_FEEBHuuuuu_FEEBHFEEBHFEEBH736</tt></li>
+<li>  <tt>jjj_HHBFFppppp_HF498</tt></li>
+<li>  <tt>cc_Eu,952</tt></li>
+<li>  <tt>_Buuuuuuuuu505_jjjjjjj</tt></li>
+<li>  <tt>Huuuuu__jjjjjjjjj652</tt></li>
+</ul>
+<h2>Examples</h2>
+
+<p>Assuming that your program is created as <tt>./matchlab</tt>, here are some
+example command-line uses (where “$” is a command-line prompt). We
+expect your program to match this output exactly.</p>
+
+<pre>  $ ./matchlab ccccccc=rrrr,GHG
+  yes
+  $ ./matchlab ccc=ppppppp:DAH
+  no
+  $ ./matchlab ccccccc=rrrr,GHG ccc=ppppppp:DAH
+  yes
+  no
+  $ ./matchlab -t ccccccc=rrrr,GHG
+  GGGGGGGGGGGGGGGG
+  $ ./matchlab -t ccc=ppppppp:DAH ccccccc=rrrr,GHG
+  GGGGGGGGGGGGGGGG
+  $ ./matchlab -t ccccccc=rrrr,GHG ccccc=rrrr,C
+  GGGGGGGGGGGGGGGG
+  CCCCCCCCCCCC
+  $ ./matchlab -t -b gg,Cwwwwwwwww_C606
+  g0g1,2C3w4w5w6w7w0w1w2w3w4_5C6670061
+  $ ./matchlab -c -t jjjjjjjjj_GEHuuuuuuu_E914
+  jjjjjjjjj_Huuuuuuu_914
+  $ ./matchlab -c jjjjjjjjj_GEHuuuuuuu_E914
+  yes
+</pre>
+
+
+</body></html>
