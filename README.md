@@ -1,3 +1,3 @@
-# CS 4400
+# CS 4400 Computer Systems (CSAPP)
 
-CS 4400 Assignments, University of Utah, 2018
+CS 4400 Computer Systems Assignments, Fall 2018, University of Utah
